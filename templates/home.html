@@ -1,0 +1,54 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fuvani ✨</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{% static 'logo.jpeg' %}" alt="Fuvani Logo">
+                <span>Fuvani</span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>
+                ✨ Upload your room → See a new design → Shop everything you see 🛋️
+            </h1>
+            <p class="subtext">
+                Turn any normal room into a beautifully designed space in seconds.<br>
+                Just upload a photo and get a new look with real product links.
+            </p>
+
+            <div class="waitlist-box">
+    <a href="https://forms.gle/zpmy5knXyF5ZrcMw8" 
+       target="_blank" 
+       rel="noopener" 
+       class="cta-btn">
+       Join Waitlist
+    </a>
+</div>
+
+
+
+            <div class="steps">
+                <div>🪄 1. Upload a photo of your room</div>
+                <div>✨ 2. See a beautiful new design in seconds</div>
+                <div>🛍️ 3. Tap on anything you like to see where to buy it</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© {{ year|default:2025 }} Fuvani. All rights reserved.</p>
+    </footer>
+</body>
+</html>
