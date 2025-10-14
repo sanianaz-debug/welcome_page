@@ -1,23 +1,15 @@
 services:
   - type: web
-    name: fuvani-django
+    name: welcome-page
     env: python
-    plan: free
-    buildCommand: |
-      pip install -r requirements.txt
-      python manage.py collectstatic --noinput
-    startCommand: gunicorn mysite.wsgi:application
-    postDeployCommand: python manage.py migrate
+    rootDir: .
+    buildCommand: >
+      export PYTHONPATH=/opt/render/project/src &&
+      pip install -r requirements.txt &&
+      DJANGO_SETTINGS_MODULE=mysite.settings python -m django collectstatic --noinput
+    startCommand: >
+      export PYTHONPATH=/opt/render/project/src &&
+      gunicorn mysite.wsgi:application
     envVars:
-      - key: DJANGO_SETTINGS_MODULE
-        value: mysite.settings
       - key: PYTHON_VERSION
-        value: 3.11
-      - key: DEBUG
-        value: "False"
-      - key: SECRET_KEY
-        generateValue: true
-      - key: ALLOWED_HOSTS
-        value: .onrender.com,fuvani.com,www.fuvani.com
-      - key: CSRF_TRUSTED_ORIGINS
-        value: https://*.onrender.com,https://fuvani.com,https://www.fuvani.com
+        value: 3.12.6
