@@ -22,6 +22,9 @@ SECRET_KEY = os.getenv(
     "django-insecure-vp08@d6g8suojzfe724x-yp8@83n87gbc4q6a*w&4lt#bixl*q"  # fallback for local
 )
 
+'''DEBUG = True
+ALLOWED_HOSTS = []'''
+
 # ✅ Turn off DEBUG on Render, control via environment variable
 DEBUG = os.getenv("DEBUG", "False").lower() == "true"
 
