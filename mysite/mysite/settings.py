@@ -51,8 +51,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+ROOT_URLCONF = 'mysite.mysite.urls'
 
-ROOT_URLCONF = 'mysite.urls'
 
 TEMPLATES = [
     {
@@ -121,5 +121,6 @@ CSRF_TRUSTED_ORIGINS = [
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 
