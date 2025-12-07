@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Refund & Cancellation Policy – Fuvani Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<header>
+        <nav>
+            <div class="logo">
+                <img src="{% static 'logo.jpeg' %}" alt="Fuvani Logo" style="height:50px;">
+
+                <span>Fuvani</span>
+            </div>
+        </nav>
+    
+  <nav class="nav-links">
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'pricing' %}">Pricing</a>
+    <a href="{% url 'contact' %}">Contact</a>
+  </nav>
+</header>
+
+<section class="page legal">
+  <h2>Refund & Cancellation Policy</h2>
+
+  <h3>Nature of Service</h3>
+  <p>Fuvani Studio provides a digital service (AI-generated room designs). Once a design is generated, it cannot be returned.</p>
+
+  <h3>Refunds</h3>
+  <p>
+    If you are charged but do not receive your design due to a technical issue,
+    please contact us at support@fuvani.com within 24 hours, including your payment details.
+    After verifying the issue, we may provide a refund or reprocess the design.
+  </p>
+
+  <h3>Cancellations</h3>
+  <p>Orders cannot be cancelled after the AI design generation has started.</p>
+
+  <h3>Contact</h3>
+  <p>For refund questions, email: support@fuvani.com.</p>
+</section>
+
+<footer class="site-footer">
+  <div>© 2025 Fuvani Studio</div>
+  <div class="footer-links">
+    <a href="{% url 'terms' %}">Terms & Conditions</a>
+    <a href="{% url 'privacy' %}">Privacy Policy</a>
+    <a href="{% url 'refund' %}">Refund & Cancellation</a>
+    <a href="{% url 'shipping' %}">Shipping / Delivery</a>
+  </div>
+</footer>
+
+<script src="{% static 'main/js/main.js' %}"></script>
+</body>
+</html>

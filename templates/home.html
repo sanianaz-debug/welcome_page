@@ -12,7 +12,8 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="{% static 'logo.jpeg' %}" alt="Fuvani Logo">
+               <img src="{% static 'logo.jpeg' %}" alt="Fuvani Logo" style="height:50px;">
+
                 <span>Fuvani</span>
             </div>
         </nav>
@@ -46,6 +47,18 @@
             </div>
         </div>
     </section>
+
+    <footer class="site-footer">
+  <div>© 2025 Fuvani Studio</div>
+  <div class="footer-links">
+    <a href="{% url 'terms' %}">Terms & Conditions</a>
+    <a href="{% url 'privacy' %}">Privacy Policy</a>
+    <a href="{% url 'refund' %}">Refund & Cancellation</a>
+    <a href="{% url 'shipping' %}">Shipping / Delivery</a>
+  </div>
+</footer>
+
+<script src="{% static 'main/js/main.js' %}"></script>
 
     <footer>
         <p>© {{ year|default:2025 }} Fuvani. All rights reserved.</p>

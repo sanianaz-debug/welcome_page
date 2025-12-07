@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shipping / Delivery Policy – Fuvani Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<header>
+        <nav>
+            <div class="logo">
+                <img src="{% static 'logo.jpeg' %}" alt="Fuvani Logo" style="height:50px;">
+
+                <span>Fuvani</span>
+            </div>
+        </nav>
+    
+  <nav class="nav-links">
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'pricing' %}">Pricing</a>
+    <a href="{% url 'contact' %}">Contact</a>
+  </nav>
+</header>
+
+<section class="page legal">
+  <h2>Shipping / Delivery Policy</h2>
+
+  <h3>Digital Delivery Only</h3>
+  <p>Fuvani Studio delivers all designs digitally. We do not ship any physical products.</p>
+
+  <h3>Delivery Time</h3>
+  <p>
+    After successful payment, your AI design is usually generated within a few minutes.
+    In some cases, it may take up to 24 hours due to high demand or technical issues.
+  </p>
+
+  <h3>How You Receive Designs</h3>
+  <ul>
+    <li>Designs are available inside your Fuvani account on the website</li>
+    <li>We may also send a link to your registered email address</li>
+  </ul>
+
+  <h3>Contact</h3>
+  <p>For any delivery-related queries, contact: support@fuvani.com.</p>
+</section>
+
+<footer class="site-footer">
+  <div>© 2025 Fuvani Studio</div>
+  <div class="footer-links">
+    <a href="{% url 'terms' %}">Terms & Conditions</a>
+    <a href="{% url 'privacy' %}">Privacy Policy</a>
+    <a href="{% url 'refund' %}">Refund & Cancellation</a>
+    <a href="{% url 'shipping' %}">Shipping / Delivery</a>
+  </div>
+</footer>
+
+<script src="{% static 'main/js/main.js' %}"></script>
+</body>
+</html>
