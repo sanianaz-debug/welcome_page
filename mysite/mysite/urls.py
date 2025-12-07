@@ -15,25 +15,21 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path,include
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('mysite.welcome.urls')),  # connects to your "welcome" app
-# 👈 This connects to your "welcome" app
-]
-
-from django.contrib import admin
+from django.urls import path, include
 from django.http import HttpResponse
-from django.urls import path
 
 
 def health(request):
+    # This is only for health checks, NOT the homepage
     return HttpResponse("Hello from Render, Django is working!")
 
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", health, name="health"),
-]
 
+    # Health check on /health/ (optional, but safe)
+    path("health/", health, name="health"),
+
+    # Your real website at "/"
+    path("", include("mysite.welcome.urls")),  # 👈 this now actually works
+]
