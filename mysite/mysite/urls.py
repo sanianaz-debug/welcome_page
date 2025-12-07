@@ -19,5 +19,7 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('welcome.urls')),  # 👈 This connects to your "welcome" app
+    path('', include('mysite.welcome.urls')),  # connects to your "welcome" app
+# 👈 This connects to your "welcome" app
 ]
+
