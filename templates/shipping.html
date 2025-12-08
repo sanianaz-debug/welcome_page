@@ -9,14 +9,13 @@
 </head>
 <body>
 <header>
-        <nav>
-            <div class="logo">
-                <img src="{% static 'logo.jpeg' %}" alt="Fuvani Logo" style="height:50px;">
+  <nav>
+    <div class="logo">
+      <img src="{% static 'logo.jpeg' %}" alt="Fuvani Logo" style="height:50px;">
+      <span>Fuvani</span>
+    </div>
+  </nav>
 
-                <span>Fuvani</span>
-            </div>
-        </nav>
-    
   <nav class="nav-links">
     <a href="{% url 'home' %}">Home</a>
     <a href="{% url 'pricing' %}">Pricing</a>
@@ -27,23 +26,55 @@
 <section class="page legal">
   <h2>Shipping / Delivery Policy</h2>
 
-  <h3>Digital Delivery Only</h3>
-  <p>Fuvani Studio delivers all designs digitally. We do not ship any physical products.</p>
-
-  <h3>Delivery Time</h3>
   <p>
-    After successful payment, your AI design is usually generated within a few minutes.
-    In some cases, it may take up to 24 hours due to high demand or technical issues.
+    Fuvani Studio provides <strong>AI-generated interior design transformations</strong> for your rooms. 
+    All services and outputs are delivered digitally through our website and/or email.
   </p>
 
-  <h3>How You Receive Designs</h3>
+  <h3>1. Digital Delivery Only</h3>
+  <p>
+    We <strong>do not ship any physical products</strong>.  
+    All room transformations, design previews, and related files are delivered online.
+    There are no courier charges, packaging fees, or physical shipping involved.
+  </p>
+
+  <h3>2. Delivery Time</h3>
+  <p>
+    After a successful payment and upload of your room image(s), Fuvani usually generates your 
+    AI design transformations within a few minutes.
+  </p>
+  <p>
+    In some situations (high demand, maintenance, or technical issues), delivery may take 
+    up to <strong>24 hours</strong>. If there is an unusual delay, we will try to inform you on the website
+    or by email.
+  </p>
+
+  <h3>3. How You Receive Your Designs</h3>
   <ul>
-    <li>Designs are available inside your Fuvani account on the website</li>
-    <li>We may also send a link to your registered email address</li>
+    <li>Your transformations are made available inside your Fuvani Studio account/dashboard on our website.</li>
+    <li>In some cases, we may also send a secure link to your registered email address.</li>
+    <li>You can view, download, and save your AI-generated images from there.</li>
   </ul>
 
-  <h3>Contact</h3>
-  <p>For any delivery-related queries, contact: support@fuvani.com.</p>
+  <h3>4. Incorrect Email or Access Issues</h3>
+  <p>
+    If you entered a wrong email at the time of signup or payment, or you are unable to access your designs, 
+    please contact us with your payment details so we can help locate your order and update your information.
+  </p>
+
+  <h3>5. No Physical Shipping</h3>
+  <p>
+    Since Fuvani Studio only delivers digital designs, there is no concept of physical delivery, 
+    logistics tracking, or “shipping status”. Your order is considered delivered once the designs 
+    are available in your account or sent to your email.
+  </p>
+
+  <h3>6. Contact</h3>
+  <p>
+    For any delivery-related questions or access issues, you can reach us at  
+    <strong>support@fuvani.com</strong> or through the form on our 
+    <a href="{% url 'contact' %}">Contact page</a>.
+  </p>
 </section>
 
 <footer class="site-footer">
