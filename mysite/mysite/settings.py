@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-ROOT_URLCONF = 'mysite.mysite.urls'
+ROOT_URLCONF = 'mysite.urls'
 
 
 TEMPLATES = [
@@ -105,7 +105,7 @@ USE_TZ = True
 # ✅ Static files for Render
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [BASE_DIR.parent / 'static']
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
 STATIC_ROOT = BASE_DIR.parent / 'staticfiles'
 
@@ -122,6 +122,7 @@ CSRF_TRUSTED_ORIGINS = [
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 
 
